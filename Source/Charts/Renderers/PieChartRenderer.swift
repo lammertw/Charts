@@ -171,6 +171,10 @@ open class PieChartRenderer: DataRenderer
 
                     context.setFillColor(dataSet.color(atIndex: j).cgColor)
 
+                    if let shadowColor = dataSet.shadowColor?.cgColor {
+                        context.setShadow(offset: dataSet.shadowOffset, blur: dataSet.shadowBlur, color: shadowColor)
+                    }
+
                     let sliceSpaceAngleOuter = visibleAngleCount == 1 ?
                         0.0 :
                         sliceSpace / radius.DEG2RAD

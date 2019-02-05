@@ -108,6 +108,15 @@ open class PieChartDataSet: ChartDataSet, IPieChartDataSet
     /// the color for the highlighted sector
     open var highlightColor: NSUIColor? = nil
 
+    /// the color for the shadow
+    open var shadowColor: NSUIColor? = nil
+
+    /// the offset for the shadow
+    open var shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0)
+
+    /// the blur for the shadow
+    open var shadowBlur: CGFloat = 0.0
+
     // MARK: - NSCopying
 
     open override func copy(with zone: NSZone? = nil) -> Any

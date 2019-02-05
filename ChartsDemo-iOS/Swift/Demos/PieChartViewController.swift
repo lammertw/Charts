@@ -80,7 +80,9 @@ class PieChartViewController: DemoBaseViewController {
         let set = PieChartDataSet(values: entries, label: "Election Results")
         set.drawIconsEnabled = false
         set.sliceSpace = 2
-        
+        set.shadowColor = UIColor.black.withAlphaComponent(0.3)
+        set.shadowOffset = CGSize(width: 0, height: 2)
+        set.shadowBlur = 3
         
         set.colors = ChartColorTemplates.vordiplom()
             + ChartColorTemplates.joyful()

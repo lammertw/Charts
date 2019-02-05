@@ -62,4 +62,13 @@ public protocol IPieChartDataSet: IChartDataSet
     /// get/sets the color for the highlighted sector
     var highlightColor: NSUIColor? { get set }
 
+    /// get/sets a shadow color to the pie chart
+    var shadowColor: NSUIColor? { get set }
+
+    /// get/sets a shadow offset to the pie chart
+    var shadowOffset: CGSize { get set }
+
+    /// get/sets a shadow blur to the pie chart
+    var shadowBlur: CGFloat { get set }
+
 }
